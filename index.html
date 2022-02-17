@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body>
+    <form name="myForm">
+      <select name="currency" id="cur-select">
+        <option value="">--Please choose an currency--</option>
+      </select>
+    </form>
+
+    <button id="week">week</button>
+    <button id="month">month</button>
+    <button id="quarter">quarter</button>
+    <button id="year">year</button>
+
+    <p>
+      Выберите дату c:
+      <input
+        id="start"
+        type="date"
+        name="calendar"
+        value="2012-06-01"
+        max="2023-06-04"
+        min="2019-12-29"
+      />
+    </p>
+
+    <p>
+      Выберите дату по:
+      <input
+        id="end"
+        type="date"
+        name="calendar"
+        value="2012-06-01"
+        max="2023-06-04"
+        min="2012-05-29"
+      />
+      <input type="submit" value="Отправить" />
+    </p>
+
+    <div id="div3">
+      <h3 id="CurName"></h3>
+
+      <h3 id="CurRate"></h3>
+    </div>
+
+    <div class="col-sm" id="js-result">Результат:</div>
+    <div id="curve_chart" style="width: 900px; height: 500px"></div>
+
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
