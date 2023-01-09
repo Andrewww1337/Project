@@ -6,43 +6,86 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <form class="form" name="myForm">
-      <h3>Курс</h3>
-      <select name="currency" id="cur-select">
-        <option value="">--Please choose an currency--</option>
-      </select>
+    <div class="nav">
+      <div class="logo">
+        <img class="fLogo" src="PngItem_1686702.png" />
+        <h2 class="superLogo">MyBank</h2>
+      </div>
       
-      <p>
-        <h3>с</h3>
-        <input
-          id="start"
-          type="date"
-          name="calendar"
-          value="2012-06-01"
-          max="2023-06-04"
-          min="2019-12-29"
-        />
-      </p>
+  
+      
+      <div class="table">
+        <h2>USD - <h2 id = "ussd"></h2></h2>
+        <h2>RUB - <h2 id = "rub"></h2></h2>
+        <h2>EUR - <h2 id = "eur"></h2></h2>
 
-      <p>
-        <h3>по</h3>
-        <input
-          id="end"
-          type="date"
-          name="calendar"
-          value="2012-06-01"
-          max="2023-06-04"
-          min="2012-05-29"
-        />
-      </p>
-    </form>
-<div class="form">
-  <h3>или сразу на:</h3>
-    <button id="week">week</button>
-    <button id="month">month</button>
-    <button id="quarter">quarter</button>
-    <button id="year">year</button>
+      </div>
+    
+    </div>
+
+    <div class="aboutMe">
+      <div class="me">
+      <h2>About me</h2>
+      <h3>This is a website where you can track the exchange rate against the Belarusian ruble. It is based on the API of the National Bank of the Republic of Belarus</h3>
+    </div>
+    <div class="sel">
+      <form class="form" name="myForm">
+        <div>
+        <h3>Currency name</h3>
+        <select name="currency" id="cur-select">
+         
+          <option value="">Please choose an currency</option>
+        </select>
+      </div>
+        <div class="date">
+          <h3 class="calendar">Date</h3>
+        <p class="calendar">
+          
+          <input
+            id="start"
+            type="date"
+            name="calendar"
+            value="2012-06-01"
+            max="2023-06-04"
+            min="2019-12-29"
+          />
+        </p>
+  
+        <p>
+          
+          <input
+            id="end"
+            type="date"
+            name="calendar"
+            value="2012-06-01"
+            max="2023-06-04"
+            min="2012-05-29"
+          />
+        </p>
+        </div>
+      </form>
+      </div>
+      
+
+     
+      <div class="last">
+        <h3 class="calendar">Period</h3>
+          <div>
+              <button class="button" id="week">week</button>
+              <button class="button" id="month">month</button>
+          </div>
+          <div>
+              <button class="button" id="quarter">quarter</button>
+              <button class="button" id="year">year</button>
+          </div>
+      </div>
+    </div>
   </div>
+  
+    
+    <div class="col-sm" id="js-result">Результат:</div>
+    <div id="curve_chart" style="width: 900px; height: 500px"></div>
+
 
     <div id="div3">
       <h3 id="CurName"></h3>
@@ -50,8 +93,7 @@
       <h3 id="CurRate"></h3>
     </div>
 
-    <div class="col-sm" id="js-result">Результат:</div>
-    <div id="curve_chart" style="width: 900px; height: 500px"></div>
+    
 
     <script
       type="text/javascript"

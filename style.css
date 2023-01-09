@@ -5,7 +5,62 @@
 body {
   background-color: rgb(68, 71, 75);
 }
+.last {
+  display: flex;
+  flex-direction: column;
+}
+.fLogo {
+  height: 70px;
+  width: 70px;
+}
+.nav {
+  display: flex;
+  justify-content: space-around;
+}
+.logo {
+  display: flex;
+}
+.superLogo {
+  margin-top: 3vh;
+  margin-left: 1vw;
+}
+.table {
+  display: flex;
+  flex-direction: column;
+}
+.aboutMe {
+  height: 15vh;
+  width: 90%;
+  border: solid white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: auto;
+}
+.me {
+  width: 30%;
+}
+.sel {
+  display: flex;
+  flex-direction: row;
+}
+#cur-select {
+  height: 3vh;
+  margin-top: 1.5vw;
+}
 .form {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+}
+.button {
+  width: 50px;
+  height: 25px;
+  margin-bottom: 0.7vh;
+}
+.calendar {
+  margin-bottom: 0.5vw;
+}
+.date {
+  margin-left: 5vw;
 }
