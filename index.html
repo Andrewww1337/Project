@@ -15,9 +15,9 @@
   
       
       <div class="table">
-        <h2>USD - <h2 id = "ussd"></h2></h2>
-        <h2>RUB - <h2 id = "rub"></h2></h2>
-        <h2>EUR - <h2 id = "eur"></h2></h2>
+        <div class="courseToday"><h2>USD - <h2 id = "ussd"></h2></h2></div>
+        <div class="courseToday"><h2>RUB - <h2 id = "rub"></h2></h2></div>
+        <div class="courseToday"><h2>EUR - <h2 id = "eur"></h2></h2></div>
 
       </div>
     
@@ -83,15 +83,17 @@
   </div>
   
     
-    <div class="col-sm" id="js-result">Результат:</div>
+    
+    <div class="result">
+      
     <div id="curve_chart" style="width: 900px; height: 500px"></div>
 
 
-    <div id="div3">
+    <div id="divResult">
       <h3 id="CurName"></h3>
-
-      <h3 id="CurRate"></h3>
+      <h3 class="curInTable" id="CurRate"></h3>
     </div>
+  </div>
 
     
 

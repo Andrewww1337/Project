@@ -57,6 +57,12 @@ function nowTime() {
   end.setAttribute("max", "2023-06-04");
 }
 nowTime();
+start.onchange = function mnmh(ev) {
+  rrr();
+};
+end.onchange = function rgvr(ev) {
+  rrr();
+};
 week.addEventListener("click", function () {
   let toDay = "";
   let weekAgo = "";
@@ -64,6 +70,7 @@ week.addEventListener("click", function () {
   weekAgo += `${lastWeek}`;
   start.innerHTML = start.value = weekAgo;
   end.innerHTML = end.value = toDay;
+  rrr();
 });
 month.addEventListener("click", function () {
   let toDay = "";
@@ -82,6 +89,7 @@ quarter.addEventListener("click", function () {
   quarterAgo += `${lastQuarter}`;
   start.innerHTML = start.value = quarterAgo;
   end.innerHTML = end.value = toDay;
+  rrr();
 });
 year.addEventListener("click", function () {
   let toDay = "";
@@ -90,7 +98,9 @@ year.addEventListener("click", function () {
   yearAgo += `${lastYear}`;
   start.innerHTML = start.value = yearAgo;
   end.innerHTML = end.value = toDay;
+  rrr();
 });
+
 function drawChart() {
   var data = google.visualization.arrayToDataTable(din);
   var options = {
@@ -130,7 +140,7 @@ const mapping = {
 function rrr() {
   const worker1 = new Worker("worker1.js");
   worker1.onmessage = mess;
-
+  din = [["Year", "Sales", "Expenses"]];
   worker1.postMessage({
     idw: curId,
     dateStart: start.value,
@@ -138,6 +148,7 @@ function rrr() {
   });
   function mess(event) {
     let curContent = event.data;
+
     console.log(curContent);
     console.log(curContent);
     let tableContent = "";
@@ -145,8 +156,9 @@ function rrr() {
     for (let i = 0; i < curContent.length; i++) {
       let curRate = curContent[i].Cur_OfficialRate;
       let curDate = curContent[i].Date.slice(0, 10);
+
       din.push([curDate, curRate, 0]);
-      tableContent += `<div>${curRate}руб</div>`;
+      tableContent += `${i} day - ${curRate}руб, `;
     }
     CurRate.innerHTML = tableContent;
     console.log(din);

@@ -5,6 +5,17 @@
 body {
   background-color: rgb(68, 71, 75);
 }
+.courseToday {
+  display: flex;
+  flex-direction: row;
+}
+.result {
+  display: flex;
+  flex-direction: row;
+  margin-left: 100px;
+  margin-top: 20px;
+  margin-right: 100px;
+}
 .last {
   display: flex;
   flex-direction: column;
@@ -63,4 +74,7 @@ body {
 }
 .date {
   margin-left: 5vw;
+}
+.curInTable {
+  margin-left: 20px;
 }
